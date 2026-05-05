@@ -9,7 +9,7 @@
 ## クイック検索ガイド
 
 ```
-テーマで探す    → #72ms / #bungu / #hakko
+テーマで探す    → #72ms / #bungu
 ステータスで探す → #draft / #published / #archived
 プラットフォーム → #beehiiv / #ghost / #twitter / #instagram / #ko-fi / #karyakarsa
 季節で探す      → #spring / #summer / #autumn / #winter
@@ -41,13 +41,6 @@
 - 累計収益: $0
 - → 詳細: `content/bungu/_articles.md`
 
-### Hakko / Japanese Fermentation (#hakko)
-- 記事数: 0
-- 公開済み: 0
-- 累計PV: 0
-- 累計収益: $0
-- → 詳細: `content/hakko/_articles.md`
-
 ---
 
 ## プラットフォーム別ステータス
@@ -66,7 +59,7 @@
 ## タグ一覧
 
 ### テーマタグ
-`#72ms` `#bungu` `#hakko`
+`#72ms` `#bungu`
 
 ### 季節タグ
 `#spring` `#summer` `#autumn` `#winter`
@@ -76,7 +69,7 @@
 
 ### トピックタグ（追加していく）
 `#mindfulness` `#slow-living` `#seasonal` `#nature` `#craft` `#stationery`
-`#fermentation` `#miso` `#koji` `#hobo` `#journaling` `#sustainability`
+`#hobonichi` `#fountain-pen` `#notebook` `#journaling` `#sustainability`
 
 ### ステータスタグ
 `#draft` `#review` `#published` `#archived`
