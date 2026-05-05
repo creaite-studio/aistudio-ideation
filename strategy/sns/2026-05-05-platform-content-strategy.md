@@ -17,6 +17,8 @@
 | **Instagram** | 視覚的世界観・購買喚起 | カルーセル10%エンゲージ・Reelsで新規発見 | 直接リンク不可 | 0% | 無料 |
 | **TikTok** | 爆発的新規発見 | ニッチ一致で急成長・日本文化コンテンツ強 | 動画制作コスト高 | 0% | 無料 |
 | **Ko-fi** | デジタル販売 | 0%チップ・シンプル設定 | 発見性ゼロ | 0〜5% | 無料（Gold $6/月で5%→0%） |
+| **Ko-fi** | デジタル販売（小額） | シンプル設定・コミュニティ感 | 発見性ゼロ | 0〜5% | 無料（Gold $6/月で0%） |
+| **Gumroad** | デジタル販売（バンドル）| アフィリプログラム・VAT/GST自動対応 | 手数料~13% | ~13% | 無料（月額なし） |
 | **KaryaKarsa** | 東南アジア展開 | 90%クリエイター収益・インドネシア最大 | 日本語コンテンツ未開拓 | 10% | 無料 |
 
 ---
@@ -26,27 +28,30 @@
 ### 72 Micro-Seasons
 
 ```
-◎ Beehiiv   → 収益の中心（購読課金・PDFデジタル販売）
-◎ Substack  → 発見の入り口（Notes経由で自然流入）
-○ Twitter/X → 拡散・共感獲得
-○ Instagram → 世界観をビジュアルで届ける
-△ Medium    → 記事を流用してPV収益（工数最小）
-△ TikTok    → 動画化できる記事が出たら追加
-△ KaryaKarsa→ Phase 3以降・インドネシア語展開
-✗ Ghost     → 72候はSEO主軸ではないので不要
+◎ Beehiiv    → 収益の中心（購読課金・PDFデジタル販売）
+◎ Substack   → 発見の入り口（Notes経由で自然流入）
+○ Twitter/X  → 拡散・共感獲得
+○ Instagram  → 世界観をビジュアルで届ける
+○ Gumroad    → 年間ガイドバンドル販売・アフィリ経由受動収益（Phase 2〜）
+△ Medium     → 記事を流用してPV収益（工数最小）
+△ Ko-fi      → 季節PDFガイド単品販売（$5〜8）
+△ TikTok     → 動画化できる記事が出たら追加
+△ KaryaKarsa → Phase 3以降・インドネシア語展開
+✗ Ghost      → 72候はSEO主軸ではないので不要
 ```
 
 ### Bungu
 
 ```
-◎ Ghost     → 収益の中心（SEO×アフィリエイト）
-◎ Instagram → 購買欲を刺激するビジュアル
-○ Medium    → Ghost記事を流用してPV収益
-○ Twitter/X → 文具コミュニティとの接点
-○ Beehiiv   → ファンとの関係・Hobonichi新情報
-△ Ko-fi     → セットアップPDF販売
-✗ Substack  → API制限で自動化できず不採用
-✗ KaryaKarsa→ 文具ニーズはインドネシアで薄い
+◎ Ghost      → 収益の中心（SEO×アフィリエイト）
+◎ Instagram  → 購買欲を刺激するビジュアル
+○ Medium     → Ghost記事を流用してPV収益
+○ Twitter/X  → 文具コミュニティとの接点
+○ Beehiiv    → ファンとの関係・Hobonichi新情報
+○ Gumroad    → Hobonichi Setup Guideなど大型PDF販売・アフィリ展開
+△ Ko-fi      → セットアップPDF小額販売（$5〜8）
+✗ Substack   → API制限で自動化できず不採用
+✗ KaryaKarsa → 文具ニーズはインドネシアで薄い
 ```
 
 ---
@@ -100,7 +105,15 @@
 ### Ko-fi
 - 発見性はゼロなのでBeehiiv/Ghostからの誘導が前提
 - 価格帯は$5〜8（衝動買いライン）
-- バンドル（季節PDF4冊セット $25など）で客単価を上げる
+- 小額・単品・チップに特化（大型バンドルはGumroadへ誘導）
+
+### Gumroad
+- **アフィリエイトプログラムが最大の武器**: slow living / Japan culture系の英語クリエイターをアフィリとして招待→受動的な販売チャネルになる
+- 価格帯は$15〜25（熱狂ファン・まとめ買い層向け）
+- Gumroadのマーケットプレイス（Discover機能）にも自動掲載される → 無料の露出チャネル
+- VAT/GST（欧州・インド・オーストラリアなど）を自動処理 → 日本から全世界販売が安心して行える
+- アフィリのコミッション設定: 20〜30%（業界標準）
+- 月額固定費ゼロ・売れた時だけ手数料（~13%）が発生
 
 ### KaryaKarsa
 - インドネシア語コンテンツが前提（翻訳はClaude APIで自動化）
@@ -278,9 +291,11 @@ Substack Notes / Twitter / Instagram
 Beehiiv 無料登録
     ↓ 3〜5号で信頼構築
 Beehiiv 有料購読 $9/月
-    + Ko-fi PDFガイド $5〜8
+    + Ko-fi PDFガイド $5〜8（単品・衝動買い）
+    + Gumroad Annual Guide $20（熱狂ファン・まとめ買い）
     ↓ ファン化
 長期購読 + 友人への紹介（Beehiiv Boosts）
+    + Gumroadアフィリ経由の受動販売（他クリエイターが売ってくれる）
 
 【Bungu】
 Google検索（Ghost SEO）
@@ -289,7 +304,10 @@ Amazon経由でコミッション
     ↓ メルマガ登録CTA
 Beehiiv 無料登録
     ↓ 記事更新通知で再訪問→再購入
-Ko-fi PDFガイド購入
+Ko-fi 小額PDFガイド $5〜8
+    or Gumroad Hobonichi Complete Guide $15（まとめ版）
+    ↓
+Gumroadアフィリ登録のクリエイターが拡散→受動収益
 ```
 
 ---
