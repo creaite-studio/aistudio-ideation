@@ -9,10 +9,11 @@
 ## クイック検索ガイド
 
 ```
-テーマで探す    → #72ms / #bungu
+テーマで探す    → #72ms / #bungu / #id-travel
 ステータスで探す → #draft / #published / #archived
 プラットフォーム → #beehiiv / #ghost / #twitter / #instagram / #ko-fi / #karyakarsa
 季節で探す      → #spring / #summer / #autumn / #winter
+言語で探す      → #en / #id（インドネシア語）
 ```
 
 ---
@@ -41,6 +42,14 @@
 - 累計収益: $0
 - → 詳細: `content/bungu/_articles.md`
 
+### Japan Travel Guide / Indonesia (#id-travel)
+- 言語: インドネシア語（Bahasa Indonesia）
+- プラットフォーム: KaryaKarsa（週次シリアル）
+- 記事数: 0
+- 購読者: 0
+- 累計収益: $0
+- → 詳細: `content/id-travel/_articles.md`
+
 ---
 
 ## プラットフォーム別ステータス
@@ -59,7 +68,7 @@
 ## タグ一覧
 
 ### テーマタグ
-`#72ms` `#bungu`
+`#72ms` `#bungu` `#id-travel`
 
 ### 季節タグ
 `#spring` `#summer` `#autumn` `#winter`
