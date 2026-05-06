@@ -1,11 +1,11 @@
 ---
 name: sns-strategy
-description: SNSのフォロワー獲得戦略・コンテンツ計画・収益化ロードマップを設計する。"SNS戦略", "フォロワー増やしたい", "収益化したい", "マネタイズ計画", "投稿計画を立てて" などで起動。sns-research の調査結果があればより精度が上がる（research/sns/ を参照）。出力は strategy/sns/ と strategy/monetize/ に保存する。
+description: SNSのフォロワー獲得戦略・コンテンツ計画・収益化ロードマップを設計する。"SNS戦略", "フォロワー増やしたい", "収益化したい", "マネタイズ計画", "投稿計画を立てて" などで起動。sns-research の調査結果があればより精度が上がる（ideation/genres/[genre]/research/sns/ を参照）。出力は ideation/genres/[genre]/strategy/sns/ と ideation/genres/[genre]/strategy/monetize/ に保存する。
 ---
 
 # SNS Strategy — フォロワー獲得戦略・収益化ロードマップ
 
-調査結果（research/sns/ と personas/）を読み込み、実行可能な戦略を設計する。
+対象ジャンルを決め、調査結果（ideation/genres/[genre]/research/sns/ と ideation/genres/[genre]/personas/）を読み込み、実行可能な戦略を設計する。
 
 ## フェーズ構成
 
@@ -27,8 +27,8 @@ Phase 5: 実行計画・保存
 
 ## Phase 0: 前提確認
 
-1. sns-research の調査結果ファイルが `research/sns/` にあれば読み込む
-2. ペルソナ定義が `personas/` にあれば読み込む
+1. sns-research の調査結果ファイルが `ideation/genres/[genre]/research/sns/` にあれば読み込む
+2. ペルソナ定義が `ideation/genres/[genre]/personas/` にあれば読み込む
 3. 不足情報をユーザーに確認:
    - プラットフォーム・ジャンル（未調査の場合）
    - 現在のフォロワー数・投稿実績
@@ -198,8 +198,8 @@ Phase 5: 実行計画・保存
 ```
 
 **ファイル保存:**
-- SNS戦略全体 → `strategy/sns/YYYY-MM-DD-[プラットフォーム]-strategy.md`
-- 収益化ロードマップ → `strategy/monetize/YYYY-MM-DD-[プラットフォーム]-monetize.md`
+- SNS戦略全体 → `ideation/genres/[genre]/strategy/sns/YYYY-MM-DD-[プラットフォーム]-strategy.md`
+- 収益化ロードマップ → `ideation/genres/[genre]/strategy/monetize/YYYY-MM-DD-[プラットフォーム]-monetize.md`
 
 保存後: "戦略設計が完了しました。次は /requirements で要件定義に落とし込めます。"
 

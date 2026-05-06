@@ -1,6 +1,6 @@
 ---
 name: sns-research
-description: SNSプラットフォームの市場調査・競合分析・ペルソナ設計を行い、勝ちパターンと狙うべきニッチを特定する。"SNS調査", "競合分析", "ペルソナを作って", "市場を調べて", "どんな人が使う", "バズ投稿を分析" などで起動。sns-strategy を使う前に必ず先に実行すること。出力は research/sns/ と personas/ に保存する。
+description: SNSプラットフォームの市場調査・競合分析・ペルソナ設計を行い、勝ちパターンと狙うべきニッチを特定する。"SNS調査", "競合分析", "ペルソナを作って", "市場を調べて", "どんな人が使う", "バズ投稿を分析" などで起動。sns-strategy を使う前に必ず先に実行すること。出力は ideation/genres/[genre]/research/sns/ と ideation/genres/[genre]/personas/ に保存する。
 ---
 
 # SNS Research — 市場調査・競合分析・ペルソナ設計
@@ -25,7 +25,7 @@ Phase 4: 勝ちパターン抽出・保存
 
 ## Phase 0: 調査設計
 
-まず `brainstorm/` の最新ファイルを確認し、**SNS展開ブリーフ** があれば読み込む。
+まず対象ジャンルを決め、`ideation/genres/[genre]/brainstorm/` の最新ファイルを確認し、**SNS展開ブリーフ** があれば読み込む。
 ブリーフがある場合はその内容を前提として使い、不足情報だけユーザーに確認する。
 
 **確認する情報:**
@@ -158,12 +158,12 @@ Phase 1〜2 の調査結果から、最重要ターゲットペルソナを1〜2
 
 ### 次のアクション
 - [ ] sns-strategy でコンテンツ戦略・収益化計画を立案する
-- [ ] personas/ にペルソナファイルを保存する
+- [ ] ideation/genres/[genre]/personas/ にペルソナファイルを保存する
 ```
 
 **ファイル保存:**
-- 調査レポート全体 → `research/sns/YYYY-MM-DD-[プラットフォーム]-[ジャンル].md`
-- ペルソナ定義 → `personas/[ペルソナ名].md`
+- 調査レポート全体 → `ideation/genres/[genre]/research/sns/YYYY-MM-DD-[プラットフォーム]-[ジャンル].md`
+- ペルソナ定義 → `ideation/genres/[genre]/personas/[ペルソナ名].md`
 
 保存後: "調査完了です。/sns-strategy でこの結果をもとに戦略を立案できます。"
 
