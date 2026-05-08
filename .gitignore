@@ -1,2 +1,8 @@
 .claude/settings.local.json
 .claude/worktrees/
+apps/content-workbench/.data/articles/*.json
+!apps/content-workbench/.data/articles/beehiiv.json
+!apps/content-workbench/.data/articles/ghost.json
+!apps/content-workbench/.data/articles/x.json
+!apps/content-workbench/.data/articles/instagram.json
+!apps/content-workbench/.data/articles/karyaKarsa.json

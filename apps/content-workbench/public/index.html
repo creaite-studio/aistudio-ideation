@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Content Workbench</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AIStudio Ideation</p>
+          <h1>記事制作ワークベンチ</h1>
+        </div>
+        <div class="top-actions">
+          <button id="newArticleBtn" type="button">新規記事</button>
+          <button id="saveBtn" type="button" class="primary">保存</button>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="画面切り替え">
+        <button class="tab active" type="button" data-view="dashboard">ダッシュボード</button>
+        <button class="tab" type="button" data-view="editor">エディター</button>
+        <button class="tab" type="button" data-view="library">画像ライブラリ</button>
+      </nav>
+
+      <main>
+        <section id="dashboardView" class="view active">
+          <div class="metric-grid" id="metrics"></div>
+          <div class="dashboard-grid">
+            <section class="panel">
+              <div class="section-header">
+                <h2 id="dashboardListTitle">記事カード</h2>
+                <button id="clearDashboardFilterBtn" type="button">絞り込み解除</button>
+              </div>
+              <div id="dashboardArticleCards" class="card-list"></div>
+            </section>
+            <section class="panel">
+              <h2>記事情報</h2>
+              <div id="dashboardArticleDetail" class="article-detail"></div>
+            </section>
+          </div>
+          <section class="panel">
+            <h2>最近更新した記事</h2>
+            <div id="recentArticles" class="card-list"></div>
+          </section>
+        </section>
+
+        <section id="editorView" class="view editor-layout">
+          <aside class="panel sidebar">
+            <div class="filter-row">
+              <input id="searchInput" type="search" placeholder="タイトル・タグで検索" />
+              <select id="themeFilter">
+                <option value="">すべてのテーマ</option>
+                <option value="72ms">72ms</option>
+                <option value="bungu">文具</option>
+                <option value="id-travel">インドネシア向け旅行</option>
+              </select>
+              <select id="statusFilter">
+                <option value="">すべての状態</option>
+                <option value="draft">下書き</option>
+                <option value="review">レビュー中</option>
+                <option value="published">公開済み</option>
+                <option value="archived">アーカイブ</option>
+              </select>
+            </div>
+            <div id="articleList" class="article-list"></div>
+          </aside>
+
+          <section class="panel editor-panel">
+            <div class="form-grid">
+              <label>
+                タイトル
+                <input id="baseTitle" type="text" />
+              </label>
+              <label>
+                テーマ
+                <select id="theme">
+                  <option value="72ms">72ms</option>
+                  <option value="bungu">文具</option>
+                  <option value="id-travel">インドネシア向け旅行</option>
+                </select>
+              </label>
+              <label>
+                状態
+                <select id="status">
+                  <option value="draft">下書き</option>
+                  <option value="review">レビュー中</option>
+                  <option value="published">公開済み</option>
+                  <option value="archived">アーカイブ</option>
+                </select>
+              </label>
+              <label>
+                タグ
+                <input id="tags" type="text" placeholder="72ms, spring, nature" />
+              </label>
+            </div>
+
+            <label class="body-label">
+              本文 Markdown
+              <textarea id="baseBodyMd" spellcheck="false"></textarea>
+            </label>
+
+            <div class="section-header">
+              <h2>プラットフォーム別バリアント</h2>
+              <p class="section-note">必要なプラットフォームをオンにして入力します。</p>
+            </div>
+            <div id="platformFields" class="platform-fields"></div>
+
+            <section class="subpanel">
+              <h2>ChatGPT画像ワークフロー</h2>
+              <div class="form-grid image-grid">
+                <select id="imagePurpose">
+                  <option value="hero">アイキャッチ</option>
+                  <option value="inline">挿絵</option>
+                  <option value="carousel">カルーセル</option>
+                </select>
+                <select id="imageRatio">
+                  <option value="1:1">1:1</option>
+                  <option value="3:2">3:2</option>
+                  <option value="16:9">16:9</option>
+                </select>
+              </div>
+              <textarea id="imagePrompt" class="image-prompt" placeholder="ChatGPTで生成したい画像の内容"></textarea>
+              <div class="top-actions">
+                <button id="composePromptBtn" type="button">プロンプト作成</button>
+                <button id="copyPromptBtn" type="button">ChatGPT用にコピー</button>
+              </div>
+              <textarea id="composedPrompt" class="image-prompt" readonly placeholder="ChatGPTに貼るプロンプトがここに表示されます"></textarea>
+              <label>
+                生成済み画像を添付
+                <input id="imageUpload" type="file" accept="image/*" />
+              </label>
+              <button id="attachImageBtn" type="button">記事に紐付け</button>
+              <div id="imageResult" class="image-result"></div>
+            </section>
+          </section>
+        </section>
+
+        <section id="libraryView" class="view">
+          <section class="panel">
+            <div class="section-header">
+              <h2>画像ライブラリ</h2>
+              <input id="librarySearch" type="search" placeholder="プロンプトで検索" />
+            </div>
+            <div id="imageLibrary" class="image-library"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

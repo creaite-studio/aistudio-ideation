@@ -1,0 +1,11 @@
+{
+  "name": "aistudio-ideation",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:content-workbench": "npm run dev --workspace apps/content-workbench",
+    "codex-app-server": "codex app-server --listen ws://127.0.0.1:4500"
+  }
+}
