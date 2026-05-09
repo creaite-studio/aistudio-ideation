@@ -1,5 +1,52 @@
 {
   "platform": "x",
-  "updatedAt": null,
-  "articles": {}
+  "updatedAt": "2026-05-09T07:56:51.564Z",
+  "articles": {
+    "4fe1799d-3a71-48da-903e-6c9ff5ae26e9": {
+      "enabled": true,
+      "fields": {
+        "hook": "Last night, something shifted in Japan. At 10pm, I stepped outside — and the rice paddies turned on.",
+        "threadDraft": "Last night, something shifted in Japan.\r\n\r\nAt 10pm, I stepped outside — and the rice paddies turned on.\r\n\r\n10,000 frogs. All at once. A sound like the countryside itself waking up.\r\n\r\nToday marks micro-season #19 of 72. A thread 🧵\n\nJapan doesn't just have 4 seasons.\r\n\r\nThe traditional calendar divides the year into 72 micro-seasons — each about 5 days long, each named after something happening in nature right now.\r\n\r\nThis one is called 蛙始鳴.\r\n*Kawazu hajimete naku.*\r\n\"Frogs begin to sing.\"\n\nThe timing isn't random.\r\n\r\nIn early May, Japanese farmers flood their rice paddies.\r\n\r\nWater flows in. Fields become shallow mirrors.\r\n\r\nAnd frogs — who've been waiting underground for exactly this warmth — appear almost immediately.\r\n\r\nThey've been doing this for 10,000 years.\n\nHere's something that doesn't translate.\r\n\r\nThe Japanese word for frog: *kaeru* 蛙\r\nThe Japanese word for \"to return home\": *kaeru* 帰る\r\n\r\nSame sound. Different characters.\r\n\r\nSo Japanese people keep frog figurines in their wallets — to make money *return*. Near doorways — to bring travelers *home*.\n\nThe most famous haiku in Japanese was written about a frog.\r\n\r\nMatsuo Bashō, 1686:\r\n\r\n古池や　蛙飛び込む　水の音\r\n\r\n*An old silent pond.*\r\n*A frog jumps into the pond.*\r\n*Splash! Silence again.*\r\n\r\nScholars have debated it for 300 years. I think Bashō just stopped and listened.\n\nIn Japan's cities, this sound is disappearing.\r\n\r\nRice paddies become parking lots. Frogs lose their water.\r\n\r\nBut in the countryside — and in the suburbs, near canals and parks — if you step outside after dark this week, you might still find them.\r\n\r\nWet. Insistent. Alive.\n\nThis week's invitation:\r\n\r\nFind still water after dark. Any canal, pond, or flooded field near you.\r\n\r\nListen for what's already there — in whatever season surrounds you right now.\r\n\r\nThe 72 micro-seasons aren't just Japanese. They're a way of paying attention.\n\nDo you have a frog figurine somewhere?\r\n\r\nA small ceramic one, tucked in a corner?\r\n\r\nTell me where you found it 👇\r\n\r\n(リプライに全文リンクを貼る)",
+        "hashtags": "#JapaneseMicroSeasons #SlowLiving",
+        "linkPlan": "Post the full Beehiiv/story URL as a reply after the thread is live.",
+        "mediaPlan": "Use one night rice-paddy or frog image as the opening visual if available."
+      },
+      "readiness": {
+        "ready": true,
+        "checks": [
+          {
+            "id": "body-length",
+            "passed": true,
+            "message": "本文が300文字以上ある"
+          },
+          {
+            "id": "tag-exists",
+            "passed": true,
+            "message": "タグが1つ以上ある"
+          },
+          {
+            "id": "platform-required-fields",
+            "passed": true,
+            "message": "対象配信先の必須項目が入力済み"
+          },
+          {
+            "id": "x-hook-length",
+            "passed": true,
+            "message": "冒頭フックが280文字以内"
+          },
+          {
+            "id": "x-thread-length",
+            "passed": true,
+            "message": "スレッド各投稿が280文字以内"
+          },
+          {
+            "id": "x-hashtag-count",
+            "passed": true,
+            "message": "ハッシュタグが2個以内"
+          }
+        ]
+      },
+      "updatedAt": "2026-05-09T07:56:51.564Z"
+    }
+  }
 }

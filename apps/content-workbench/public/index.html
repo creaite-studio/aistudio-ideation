@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Content Workbench</title>
+    <title>記事制作ワークベンチ</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -14,6 +14,7 @@
           <h1>記事制作ワークベンチ</h1>
         </div>
         <div class="top-actions">
+          <span id="saveStatus" class="save-status" aria-live="polite">未保存</span>
           <button id="newArticleBtn" type="button">新規記事</button>
           <button id="saveBtn" type="button" class="primary">保存</button>
         </div>
@@ -28,6 +29,32 @@
       <main>
         <section id="dashboardView" class="view active">
           <div class="metric-grid" id="metrics"></div>
+          <p class="dashboard-hint">カードを選択すると右側に記事の要約と配信先が表示されます。</p>
+
+          <section class="panel calendar-panel">
+            <div class="section-header">
+              <div>
+                <h2>投稿カレンダー</h2>
+                <p class="section-note">投稿予定日を選び、選択中の記事をその日に配置できます。</p>
+              </div>
+              <div class="calendar-actions">
+                <button id="calendarPrevBtn" type="button" aria-label="前の月">‹</button>
+                <strong id="calendarTitle"></strong>
+                <button id="calendarNextBtn" type="button" aria-label="次の月">›</button>
+                <button id="autoScheduleBtn" type="button" class="primary">AIで予定案を作成</button>
+              </div>
+            </div>
+            <div class="calendar-layout">
+              <div id="calendarGrid" class="calendar-grid"></div>
+              <aside class="schedule-detail">
+                <h3 id="selectedDateTitle">日付を選択</h3>
+                <div id="selectedDateItems" class="schedule-items"></div>
+                <button id="scheduleSelectedArticleBtn" type="button">選択中の記事をこの日に予定</button>
+                <p class="section-note">AI予定案は未予定の記事を、公開準備状況と空き日を見ながら数日おきに配置します。</p>
+              </aside>
+            </div>
+          </section>
+
           <div class="dashboard-grid">
             <section class="panel">
               <div class="section-header">
@@ -36,14 +63,16 @@
               </div>
               <div id="dashboardArticleCards" class="card-list"></div>
             </section>
-            <section class="panel">
+
+            <section class="panel detail-panel">
               <h2>記事情報</h2>
               <div id="dashboardArticleDetail" class="article-detail"></div>
             </section>
           </div>
+
           <section class="panel">
             <h2>最近更新した記事</h2>
-            <div id="recentArticles" class="card-list"></div>
+            <div id="recentArticles" class="card-list compact-list"></div>
           </section>
         </section>
 
@@ -55,7 +84,7 @@
                 <option value="">すべてのテーマ</option>
                 <option value="72ms">72ms</option>
                 <option value="bungu">文具</option>
-                <option value="id-travel">インドネシア向け旅行</option>
+                <option value="id-travel">インドネシア旅行</option>
               </select>
               <select id="statusFilter">
                 <option value="">すべての状態</option>
@@ -69,6 +98,27 @@
           </aside>
 
           <section class="panel editor-panel">
+            <div id="editorContext" class="editor-context"></div>
+
+            <section class="ai-panel">
+              <div class="section-header">
+                <div>
+                  <h2>調査・AI下書き</h2>
+                  <p class="section-note">外部調査のメモを貼り付けると、本文案・各PF入力案・画像プロンプト案を作れます。</p>
+                </div>
+                <a class="button-link primary" href="https://gemini.google.com/app" target="_blank" rel="noreferrer">Google Deep Research</a>
+              </div>
+              <label>
+                調査メモ
+                <textarea id="researchNotes" class="research-notes" placeholder="Google Deep Researchなどで調査した要点、引用したい事実、読者に伝えたい発見を貼り付けます。"></textarea>
+              </label>
+              <div class="top-actions">
+                <button id="draftFromResearchBtn" type="button">調査から本文案を作成</button>
+                <button id="fillVariantsBtn" type="button">各PF入力案を作成</button>
+                <button id="suggestImagePromptBtn" type="button">画像プロンプトを提案</button>
+              </div>
+            </section>
+
             <div class="form-grid">
               <label>
                 タイトル
@@ -79,7 +129,7 @@
                 <select id="theme">
                   <option value="72ms">72ms</option>
                   <option value="bungu">文具</option>
-                  <option value="id-travel">インドネシア向け旅行</option>
+                  <option value="id-travel">インドネシア旅行</option>
                 </select>
               </label>
               <label>
@@ -102,10 +152,13 @@
               <textarea id="baseBodyMd" spellcheck="false"></textarea>
             </label>
 
-            <div class="section-header">
-              <h2>プラットフォーム別バリアント</h2>
-              <p class="section-note">必要なプラットフォームをオンにして入力します。</p>
+            <div class="section-header platform-section-header">
+              <div>
+                <h2>プラットフォーム別バリアント</h2>
+                <p class="section-note">使う配信先だけオンにすると、必要な入力欄と公開チェックが表示されます。</p>
+              </div>
             </div>
+            <div id="glossaryPanel" class="glossary-panel"></div>
             <div id="platformFields" class="platform-fields"></div>
 
             <section class="subpanel">
@@ -124,6 +177,7 @@
               </div>
               <textarea id="imagePrompt" class="image-prompt" placeholder="ChatGPTで生成したい画像の内容"></textarea>
               <div class="top-actions">
+                <button id="suggestImagePromptInlineBtn" type="button">画像プロンプトを提案</button>
                 <button id="composePromptBtn" type="button">プロンプト作成</button>
                 <button id="copyPromptBtn" type="button">ChatGPT用にコピー</button>
               </div>
@@ -132,7 +186,7 @@
                 生成済み画像を添付
                 <input id="imageUpload" type="file" accept="image/*" />
               </label>
-              <button id="attachImageBtn" type="button">記事に紐付け</button>
+              <button id="attachImageBtn" type="button">記事に紐づけ</button>
               <div id="imageResult" class="image-result"></div>
             </section>
           </section>

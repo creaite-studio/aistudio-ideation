@@ -1,5 +1,52 @@
 {
   "platform": "beehiiv",
-  "updatedAt": null,
-  "articles": {}
+  "updatedAt": "2026-05-09T07:56:51.564Z",
+  "articles": {
+    "4fe1799d-3a71-48da-903e-6c9ff5ae26e9": {
+      "enabled": true,
+      "fields": {
+        "title": "The Night Japan Fills With Frogs",
+        "previewText": "Micro-season #19 begins with the night sound of frogs rising from Japan’s rice paddies.",
+        "subjectVariants": "The Night Japan Fills With Frogs\nWhen Japan’s Rice Paddies Start Singing",
+        "summary": "A reflective English essay on micro-season #19, Frogs Begin to Sing, connecting rice paddies, frog calls, wordplay around kaeru, Basho, and paying attention to seasonal change.",
+        "cta": "Subscribe to receive all 72 micro-seasons in your inbox."
+      },
+      "readiness": {
+        "ready": true,
+        "checks": [
+          {
+            "id": "body-length",
+            "passed": true,
+            "message": "本文が300文字以上ある"
+          },
+          {
+            "id": "tag-exists",
+            "passed": true,
+            "message": "タグが1つ以上ある"
+          },
+          {
+            "id": "platform-required-fields",
+            "passed": true,
+            "message": "対象配信先の必須項目が入力済み"
+          },
+          {
+            "id": "beehiiv-title-length",
+            "passed": true,
+            "message": "配信タイトルは80文字以内で価値が伝わる"
+          },
+          {
+            "id": "beehiiv-preview-text",
+            "passed": true,
+            "message": "プレビューテキストが20文字以上ある"
+          },
+          {
+            "id": "beehiiv-subject-variants",
+            "passed": true,
+            "message": "件名A/B案が2案以上ある"
+          }
+        ]
+      },
+      "updatedAt": "2026-05-09T07:56:51.564Z"
+    }
+  }
 }

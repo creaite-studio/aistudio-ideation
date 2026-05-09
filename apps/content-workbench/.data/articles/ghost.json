@@ -1,5 +1,46 @@
 {
   "platform": "ghost",
-  "updatedAt": null,
-  "articles": {}
+  "updatedAt": "2026-05-09T07:56:51.564Z",
+  "articles": {
+    "4fe1799d-3a71-48da-903e-6c9ff5ae26e9": {
+      "enabled": false,
+      "fields": {},
+      "readiness": {
+        "ready": false,
+        "checks": [
+          {
+            "id": "body-length",
+            "passed": true,
+            "message": "本文が300文字以上ある"
+          },
+          {
+            "id": "tag-exists",
+            "passed": true,
+            "message": "タグが1つ以上ある"
+          },
+          {
+            "id": "platform-required-fields",
+            "passed": false,
+            "message": "対象配信先の必須項目が入力済み"
+          },
+          {
+            "id": "ghost-slug-format",
+            "passed": false,
+            "message": "slugが半角英小文字・数字・ハイフンで書かれている"
+          },
+          {
+            "id": "ghost-seo-description-length",
+            "passed": false,
+            "message": "SEO説明文が80〜160文字に収まっている"
+          },
+          {
+            "id": "ghost-excerpt",
+            "passed": false,
+            "message": "抜粋が40文字以上ある"
+          }
+        ]
+      },
+      "updatedAt": "2026-05-09T07:56:51.564Z"
+    }
+  }
 }
