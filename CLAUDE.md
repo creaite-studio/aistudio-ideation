@@ -1,60 +1,89 @@
-# アイデア出しワークスペース
+# aistudio-ideation — 72 Micro-Seasons
 
-## 役割
+## 作業開始前に必ず読むこと
 
-抽象的なアイデアから、具体的な要件・戦略・収益化計画まで一気通貫で扱う企画スペース。
-アプリ開発・note記事・SNS発信など領域を問わず使用する。
+1. `shared/BRAND.md` — 世界観・トーン
+2. `shared/AUDIENCE.md` — ターゲット・ペイン
+3. `shared/BUSINESS_MODEL.md` — 収益導線
+4. `STRATEGY.md` — 戦略の北極星
 
-## 基本方針
+---
 
-調査結果・戦略・要件定義などの成果物は、機能別のトップレベルではなくジャンル別に整理する。
-
-```
-ideation/genres/[genre]/
-├── brainstorm/          ← アイデア発散セッションの記録
-├── research/
-│   ├── market/          ← 市場規模・競合・アプリ調査
-│   ├── sns/             ← SNS調査・競合アカウント・バズ分析
-│   └── trends/          ← トレンドキーワード・業界動向
-├── personas/            ← ターゲットペルソナ定義
-├── strategy/
-│   ├── sns/             ← SNS運用戦略・フォロワー獲得計画
-│   └── monetize/        ← 収益化ロードマップ・マネタイズ設計
-└── requirements/        ← 要件定義・機能仕様・MVP設計
-```
-
-既存ジャンル:
-
-- `cross-genre-affiliate-sns`: アフィリエイト×SNSの横断ブレスト
-- `horror-creative-tool`: ホラー創作・物語作成支援ツール
-- `mahjong`: 麻雀
-- `darts`: ダーツ
-- `spirituality`: 占い・スピリチュアル
-- `adult`: アダルト
-- `other-apps`: その他アプリ案
-
-## アイデアのフロー
+## ディレクトリ構成
 
 ```
-brainstorm/ → research/ → personas/ → strategy/ → requirements/
-  （発散）      （調査）    （対象）     （戦略）      （具体化）
+aistudio-ideation/
+├── shared/              変わらない基盤（全作業の前提）
+├── STRATEGY.md          戦略憲法
+├── CONTENT_SYSTEM.md    コンテンツ体系
+│
+├── plan/                企画・調査（コンテンツを生み出すインプット）
+│   ├── research/        市場・競合・読者の生声・トレンド
+│   ├── angles/          コンテンツ柱・切り口・フック・アイデア
+│   ├── roles/           ブレスト用ペルソナ（戦略家・調査員・編集者 等）
+│   └── monetization/    オファー設計・収益導線詳細
+│
+├── create/              型・制作・発信
+│   ├── formats/         投稿フォーマット（carousel / reel / newsletter 等）
+│   ├── scripts/         実際の原稿
+│   ├── campaigns/       キャンペーン管理
+│   ├── assets/          ビジュアルガイドライン・プロンプト
+│   └── checks/          発信前チェック（brand / hook / platform / ethics）
+│
+├── measure/             検証・改善（フィードバックループ）
+│   ├── hypotheses/      仮説（active / validated / failed）
+│   ├── analytics/       数字振り返り・KPI
+│   └── workflows/       運用フロー・月次振り返り
+│
+├── content/             コンテンツ資産（72候の記事・リパーパス）
+└── archives/            過去資料
 ```
 
-## スキルと出力先の対応
+---
+
+## 作業別ガイド
+
+### アイデア出し・企画
+1. `plan/roles/` でペルソナを選ぶ（戦略家・調査員・編集者 等）
+2. `plan/angles/content-pillars.md` でどの柱に属するか確認
+3. `plan/angles/hook-bank.md` でフックを選ぶ
+4. `plan/angles/idea-backlog.md` にストック
+
+### 調査
+- 市場・競合: `plan/research/market/` `plan/research/competitors/`
+- SNS・読者: `plan/research/sns/` `plan/research/audience-voices/`
+- トレンド: `plan/research/trends/`
+
+### 投稿制作
+1. `measure/workflows/idea-to-post.md` を参照
+2. `create/formats/` から対象フォーマットを選ぶ
+3. `create/scripts/` に原稿を書く
+4. `create/checks/` を全項目確認してから発信
+
+### 仮説検証
+1. `measure/hypotheses/active.md` に仮説を立てる
+2. 結果に応じて `validated.md` / `failed.md` へ移動
+3. 学びを `plan/angles/hook-bank.md` に反映
+
+### 収益化
+- オファー全体: `plan/monetization/offer-map.md`
+- 無料→有料導線: `plan/monetization/free-to-paid-ladder.md`
+- KPI目標: `measure/analytics/metrics.md`
+
+---
+
+## スキルと出力先
 
 | スキル | 役割 | 出力先 |
-| --- | --- | --- |
-| `/multi-perspective-ideation` | 8専門家視点のブレスト | `ideation/genres/[genre]/brainstorm/` |
-| `/ideate` | アプリアイデア発散 | `ideation/genres/[genre]/brainstorm/` |
-| `/app-research` | アプリ市場調査 | `ideation/genres/[genre]/research/market/` |
-| `/sns-research` | SNS市場・競合・ペルソナ調査 | `ideation/genres/[genre]/research/sns/` + `ideation/genres/[genre]/personas/` |
-| `/sns-strategy` | フォロワー獲得・収益化戦略 | `ideation/genres/[genre]/strategy/sns/` + `ideation/genres/[genre]/strategy/monetize/` |
+|--------|------|-------|
+| `/multi-perspective-ideation` | 多角的ブレスト | `plan/angles/idea-backlog.md` |
+| `/sns-research` | SNS市場・競合・ペルソナ調査 | `plan/research/sns/` + `plan/research/audience-voices/` |
+| `/sns-strategy` | フォロワー獲得・収益化戦略 | `measure/hypotheses/active.md` + `plan/monetization/` |
+
+---
 
 ## ルール
-
-- 成果物を保存する前に対象ジャンルを決める。
-- ジャンルが未定の場合は `cross-genre-affiliate-sns` や `other-apps` などの横断・その他ジャンルに置く。
-- アイデアには必ずタグを付ける: `#app` `#note` `#sns` `#video`
-- 調査結果には出典 URL を必ず記載する。
-- 同日付・同テーマのファイルがある場合は追記を優先し、重複ファイルを増やさない。
-- ファイル操作前に必ず今日の日付を確認する。
+- ファイル操作の前に必ず今日の日付を確認する
+- 同日付・同テーマのファイルがある場合は追記を優先する
+- 調査結果には出典 URL を必ず記載する
+- 意思決定は `shared/DECISIONS.md` に記録する
