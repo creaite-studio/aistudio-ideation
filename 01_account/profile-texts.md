@@ -9,7 +9,7 @@
 自己責任で視聴してください。
 
 未解決事件・怪異・失踪記録——調査ファイルを公開中。
-※フィクションです
+※フィクション。実在の人物・場所・事件と無関係。
 ```
 
 ```
@@ -18,7 +18,7 @@ Watch at your own risk.
 
 Unsolved cases · disappearances · unexplained phenomena —
 Unclassifiable files, now public.
-*Fiction.
+*Fiction. Not based on real persons, places, or events.
 ```
 
 ---
@@ -33,7 +33,7 @@ Unclassifiable files, now public.
 分類不能な事案の調査ファイルを公開しています。
 
 本編 → プロフィールリンクから
-※フィクションです
+※フィクションです。実在の人物・事件・場所とは一切関係ありません。
 ```
 
 ```
@@ -44,7 +44,7 @@ Unsolved cases · disappearances · unexplained phenomena —
 Unclassifiable case files, made public.
 
 Full files → link in bio
-*Fiction.
+*Fiction. No connection to real persons, events, or places.
 ```
 
 ---
@@ -59,7 +59,7 @@ Full files → link in bio
 分類不能な事案の調査ファイルを公開しています。
 
 本物かどうかは、調べてみてください。
-※フィクションです
+※フィクションです。実在の人物・事件・場所とは一切関係ありません。
 ```
 
 ```
@@ -70,7 +70,7 @@ Unsolved cases · disappearances · unexplained phenomena —
 Unclassifiable files, made public.
 
 Real or not — look it up.
-*Fiction.
+*Fiction. No connection to real persons, events, or places.
 ```
 
 ---
@@ -120,7 +120,7 @@ Draw your own conclusions.
 未解決事件・怪異・失踪記録——
 分類不能な事案の調査メモを公開しています。
 
-※フィクションです
+※フィクションです。実在の人物・事件・場所とは一切関係ありません。
 ```
 
 ```
@@ -129,7 +129,7 @@ Read at your own risk.
 
 Unsolved cases · disappearances · unexplained phenomena —
 Investigation notes, made public.
-*Fiction.
+*Fiction. No connection to real persons, events, or places.
 ```
 
 ---
@@ -144,7 +144,7 @@ Investigation notes, made public.
 
 無料でも読めますが、有料読者には調査ファイルの完全版と考察コメントへの返答をお届けします。
 
-※フィクションです
+※フィクションです。実在の人物・事件・場所とは一切関係ありません。
 ```
 
 ```
@@ -156,7 +156,7 @@ that couldn't be shared on social media.
 
 Free to read — paid subscribers receive complete case files and direct responses to theories.
 
-*Fiction.
+*Fiction. No connection to real persons, events, or places.
 ```
 
 ---
@@ -190,3 +190,4 @@ Free to read — paid subscribers receive complete case files and direct respons
 - 「本物かどうかは、調べてみてください。」→ 英語版は "Real or not — look it up."（Xのみ）
 - 「判断は、あなたに委ねます。」→ 英語版は "Draw your own conclusions."（YouTubeのみ）
 - "Unclassifiable files" は「分類不能な事案」の訳。governmentドキュメント感を出す
+- TikTokのみ免責を短縮形「※フィクション。実在の人物・場所・事件と無関係。」を使用（文字数上限のため）
